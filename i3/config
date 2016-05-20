@@ -167,7 +167,7 @@ bar {
 }
 
 bar {
-	status_command /home/sveint/dotfiles/i3bar/conky
+	status_command i3blocks
 	position top
 	output eDP1
 }
