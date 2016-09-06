@@ -201,7 +201,8 @@ exec --no-startup-id thunderbird
 exec --no-startup-id slack
 exec --no-startup-id gnome-flashback
 exec --no-startup-id nitrogen --set-scaled --save /usr/share/backgrounds/warty-final-ubuntu.png
-#exec --no-startup-id gnome-terminal
+exec --no-startup-id xset dpms 0 180 0
+exec --no-startup-id xrdb -load ~/.Xresources
 #exec --no-startup-id gnome-terminal
 
 #exec --no-startup-id "i3-msg 'append_layout /home/sveint/dotfiles/i3/HDMI2-output.json;'"
