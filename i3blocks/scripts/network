@@ -1,0 +1,5 @@
+#!/bin/bash
+
+HOSTNAME=$(curl -4 -s ifconfig.co/json | python -c "import json; a = open('/dev/stdin').read(); print '.'.join(json.loads(a).get('hostname', 'N/A').split('.')[-2:]) if a else 'offline'")
+AP=$(nmcli --fields NAME c show --active | grep -v 'docker0\|NAME\|br-' | head -n 1 | tr -d '[:space:]')
+echo "${AP} (${HOSTNAME})"
